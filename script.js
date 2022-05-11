@@ -5,6 +5,7 @@ const limparFormulario = (endereco) =>{
     document.getElementById("estado").value = "";
 }
 
+
 const preencherFormulario = (endereco) =>{
     document.getElementById("endereco").value = endereco.logradouro;
     document.getElementById("bairro").value = endereco.bairro;
@@ -12,8 +13,10 @@ const preencherFormulario = (endereco) =>{
     document.getElementById("estado").value = endereco.uf;
 }
 
+
 const eNumero = (numero) => /^[0-9]+$/.test(numero);
 const cepValido = (cep) => cep.length == 8 && eNumero(cep); 
+
 
 const pesquisarCep = async() => {
     
@@ -39,6 +42,7 @@ function btn_apertado(){
 
 
 }
+
 
 document.getElementById('cep')
         .addEventListener('focusout',pesquisarCep);
